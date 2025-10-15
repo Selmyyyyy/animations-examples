@@ -1,0 +1,137 @@
+body{
+    height: 100vh;
+    background-color: black;
+    display: grid;
+    place-items: center;
+    /* place itmes serve a centrare l'elemento */
+}
+
+.box{
+background-color: royalblue;
+width: 50px;
+height: 50px;
+animation-name: ultraskew;
+animation-duration: 1s;
+animation-play-state: running;
+/* se in animation play state metti la freccia sopra parte in vece con running parte da sola  */
+animation-iteration-count: infinite;
+animation-delay: 0s;
+/* animetion delay serve a ritardare l'animazione */
+/* animation-direction: alternate;
+animation-fill-mode: forwards; */
+/* animetion fill mode serve a mantenere l'ultimo stato dell'animazione */
+/* animation-timing-function: ease-out; */
+animation-direction: alternate;
+/* se non ci fosse la direction alternate l'elemento darrebbe un effetto di ritorno alla posizione iniziale */
+animation-timing-function: ease-in-out;
+
+display: grid;
+place-items: center;
+
+/* transform-origin: top left; */
+/* transform orgin serve a muovere l'elemento in varie direzioni mentre ruota ad esempio lo fa andare o destra o a sinistra */
+}
+
+.box:hover{
+  animation-play-state: running;
+}
+
+/* @keyframes pippo{
+  0%{
+ background-color: royalblue;
+  } 
+  33%{
+background-color: palevioletred;
+  } 
+  66%{
+background-color: paleturquoise;
+  }  
+  100%{
+background-color: darkcyan;
+  }
+} */
+/* il keyframe che vedi sopra da animazione di alternanza tra colori */
+
+
+
+@keyframes pippo{
+  0%{
+ width: 50px;
+  } 
+   100%{
+width: 500px;
+  }
+}
+
+@keyframes pippo-rotazione{
+    from{
+        transform: rotate(0deg);
+        background-color: springgreen;
+    } 
+     to{
+        transform: rotate(360deg);
+        background-color: dodgerblue
+    }
+}
+/* serve per far ruotare l'elemento */
+
+@keyframes ipertraslazione{
+    0%{
+  transform: translate(0px,0px) ;
+    }
+    33%{
+transform: translate(100px,0px);
+    }
+    66%{
+    transform: translate(100px,100px) ;
+
+    }
+   100%{
+    transform: translate(100px,0px) ;
+   }
+}
+/* con il trransform translate si sposta lemento a destra e sinistra */
+@keyframes  gigascala 
+    
+ {
+    0%{
+  transform: scale(1) ;
+    }
+   
+   100%{
+    transform: scale(4,2) ;
+   }
+
+ /* la transform scale rende l'elemento pulsante (si ingrandisce e si rimpicciolisce e viceversa) */
+}
+
+@keyframes ultraskew {
+
+      0%{
+  transform: skew(0deg, 0deg) ;
+    }
+   
+   100%{
+    transform: skew(90deg,180deg) ;
+   }
+}
+/* è un'animazione che rende dinamico l'elemento */
+
+
+.little-box{
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    animation-name: pippo-rotazione;
+    animation-duration: 0.5s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+.little-box:hover{
+    animation-play-state: running;
+
+}
+
