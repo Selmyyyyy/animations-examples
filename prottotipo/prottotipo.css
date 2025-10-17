@@ -1,0 +1,84 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    column-gap: 2px;
+    align-items: flex-end;
+}
+
+.box{
+    height: 10px;
+    background-color: thistle;
+    flex-grow: 1;
+    animation-name: grow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes grow{
+    from{
+        height: 10px;
+        background-color: violet;
+    }
+    to{
+        height: 100vh;
+        background-color: rgb(51, 87, 153);
+    }
+}
+
+.delay1{
+    animation-delay: 1s;
+
+}
+
+.delay2{
+    animation-delay: 2s;
+    
+}
+
+.delay3{
+    animation-delay: 3s;
+    
+}
+
+.delay4{
+    animation-delay: 4s;
+    
+}
+
+.delay5{
+    animation-delay: 5s;
+    
+}
+
+.delay6{
+    animation-delay: 6s;
+    
+}
+
+.delay7{
+    animation-delay: 7s;
+    
+}
+
+.delay8{
+    animation-delay: 8s;
+    
+}
+
+.delay9{
+    animation-delay: 9s;
+    
+}
+
+.delay10{
+    animation-delay: 10s;
+    
+}
